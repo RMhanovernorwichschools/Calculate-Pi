@@ -25,6 +25,6 @@ terms=int(input('I will estimate pi. How many terms should I use? '))
 deci=int(input('How many decimal places should I use in the result? '))
 
 fs=lambda k: ((-1)**k)/(2*k+1)
-s=sum([fs(x) for x in range(0,terms)])
+s=round(4*sum([fs(x) for x in range(0,terms)]), deci)
 
-print('The approximate value of pi is {0}'.format(4*s))
+print('The approximate value of pi is {0}'.format(s))
